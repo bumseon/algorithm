@@ -1,0 +1,79 @@
+## 문제를 효율적으로 해결
+> 똑같은 문제를 해결해도 빠르게 해결하는 것이 중요
+> 같은 입력을 제공했을 때, 어느 프로그램이 더 빠른가?
+> 내 프로그램은 얼마나 빠를까?
+
+## sample 1
+> 프로그램이 대략적으로 몇 개의 명령을 수행하는가 ?
+
+#include <stdio.h>
+
+int main() {
+
+  //Please Enter Your Code Here
+  int a;
+  int b, c;
+  
+  scanf("%d %d", &b, &c);
+  
+  a = b + c;
+  
+  printf("%d\n", a);
+  return 0;
+}
+
+* O(6)
+-> 빅O표기법
+-> order 6 : 대충 내 프로그램이 6개의 명령을 수행하는구나
+-> O(1) = O(6)
+
+## sample2
+
+#include <stdio.h>
+
+int main() {
+
+  //Please Enter Your Code Here
+  int n;          // 1
+  int sum=0;  // 2
+  
+  scanf("%d",&n); // 3
+  
+  for(int i=0; i<n; i++)      // n
+    sum += i;                 
+  
+  printf("%d\n", sum);  // 4
+  return 0;                 // 5
+}
+
+* O(n+5)
+> 프로그램 복잡도에 가장 큰 영향을 끼치는 n
+> 따라서 O(n)으로 표기함
+
+
+## sample 3
+
+#include <stdio.h>
+
+int main() {
+
+  //Please Enter Your Code Here
+  int n;
+  int sum=0;
+  
+  scanf("%d",&n);
+  
+  for(int i=0; i<n; i++)
+    for(int j=0; j<n; j++)
+      sum += i*j;
+  
+  for(int i=0; i<n; i++)
+    sum += i;
+    
+  printf("%d\n", sum);
+  return 0;
+}
+
+* O(n^2 + n)
+> 프로그램 복잡도에 가장 큰 영향을 끼치는 n2
+> 따라서 O(n^2)로 표기함
