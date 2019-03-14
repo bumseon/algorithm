@@ -6,9 +6,12 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function solution(number){
-    for(i=1; i<10; i++){
-        result = number * i;
-        console.log(number + ' * ' + i + ' =', result);
+    for(i=0; i<number; i++){
+        var string = "";
+        for(j=0; j<=i; j++){
+            string = string + "*";
+        }
+        console.log(string);
     }
     rl.close();
 });
